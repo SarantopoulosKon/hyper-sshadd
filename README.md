@@ -5,7 +5,7 @@ Extension for hyper.app terminal in order to automatically load ssh-key. Inspire
 ## install
 
 ```
-npm install -g hyper-sshadd
+hyper i hyper-sshadd
 
 ```
 
