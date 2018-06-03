@@ -2,10 +2,20 @@
     "name": "hyper-sshadd",
     "version": "1.0.0",
     "description": "Plugin for hyper terminal to add automatically ssh passphrase",
+    "repository": "SarantopoulosKon/hyper-sshadd",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "keywords": [
+        "hyper",
+        "hyper.app",
+        "hyper-plugin",
+        "hyperterm-plugin",
+        "plugin",
+        "hyper-ssh",
+        "sshadd"
+    ],
     "author": "Sgus",
     "license": "MIT",
     "devDependencies": {
