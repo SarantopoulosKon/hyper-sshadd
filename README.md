@@ -1,6 +1,6 @@
 # hyper-sshadd
 
-A hyper plugin used to automatically add ssh passphrase.
+Extension for hyper.app terminal in order to automatically load ssh-key. Inspired by [hyper-startup](https://github.com/curz46/hyper-startup)
 
 ## install
 

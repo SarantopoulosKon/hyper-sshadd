@@ -56,8 +56,8 @@ const waitForRPC = window => poll(() => 'rpc' in window, 1000, 10);
 module.exports.onRendererWindow = win => {
     waitForRPC(win).then(() => {
         win.rpc.on('session add', details => {
-            const {uid} = details;
-            rpc.emit('add-ssh', uid);
+            const { uid } = details;
+            win.rpc.emit('add-ssh', uid);
         });
     });
 };
