@@ -11,7 +11,7 @@ const poll = (fn, timeout, interval = 100) => {
     const endTime = Number(new Date()) + (timeout || 2000);
 
     const checkCondition = (resolve, reject) => {
-        // If the condition is met, we're done!
+    // If the condition is met, we're done!
         const result = fn();
         if (result) {
             resolve(result);
@@ -27,8 +27,8 @@ const poll = (fn, timeout, interval = 100) => {
     return new Promise(checkCondition);
 };
 
-module.exports.onApp = (app) => {
-    const { sshPassphrase } = app.config.getConfig();
+module.exports.onApp = app => {
+    const {sshPassphrase} = app.config.getConfig();
 
     if (!sshPassphrase) {
         return;
@@ -46,7 +46,7 @@ module.exports.onApp = (app) => {
 module.exports.onWindow = win => {
     win.rpc.on('add-ssh', uid => {
         commands.forEach(cmd => {
-            win.sessions.get(uid).write(cmd + '\r');
+            win.sessions.get(uid).write(`${cmd}\r`);
         });
     });
 };
@@ -56,8 +56,8 @@ const waitForRPC = window => poll(() => 'rpc' in window, 1000, 10);
 module.exports.onRendererWindow = win => {
     waitForRPC(win).then(() => {
         win.rpc.on('session add', details => {
-            const { uid } = details;
+            const {uid} = details;
             rpc.emit('add-ssh', uid);
         });
-    })
+    });
 };

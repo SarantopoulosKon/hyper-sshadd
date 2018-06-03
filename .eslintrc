@@ -4,13 +4,11 @@
         "prettier"
     ],
     "rules": {
+        "prettier/prettier": "error",
         "linebreak-style": 0,
         "indent": [
             "error",
             4
         ]
-    },
-    "plugins": [
-        "prettier"
-    ]
+    }
 }
