@@ -6,7 +6,6 @@ Extension for hyper.app terminal in order to automatically load ssh-key. Inspire
 
 ```
 hyper i hyper-sshadd
-
 ```
 
 ## setup
@@ -20,5 +19,4 @@ module.exports = {
   },
   ...
 };
-
 ```
